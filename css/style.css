@@ -187,3 +187,20 @@ color:#2948D3;
 line-height:1.8;
 color:#6B7280;
 }
+.hero-stats{
+margin-top:60px;
+display:flex;
+justify-content:center;
+gap:80px;
+flex-wrap:wrap;
+}
+
+.hero-stats strong{
+display:block;
+font-size:36px;
+color:#2948D3;
+}
+
+.hero-stats span{
+color:#6B7280;
+}
