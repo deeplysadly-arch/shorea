@@ -94,8 +94,10 @@ margin-bottom:60px;
 
 .cards{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:24px;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+max-width:1200px;
+margin:auto; 
 }
 
 .card{
@@ -107,7 +109,7 @@ box-shadow:
 }
 
 .card h3{
-margin-bottom:15px;
+margin-bottom:auto;
 }
 
 .footer{
