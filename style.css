@@ -1,8 +1,0 @@
-
-body{font-family:Arial,sans-serif;margin:0;background:#F8FAFF;color:#1F2A44}
-header{display:flex;justify-content:space-between;padding:20px 40px;background:#fff}
-nav a{margin:0 10px;color:#1F2A44;text-decoration:none}
-.hero{padding:100px 20px;text-align:center;background:linear-gradient(135deg,#F8FAFF,#D9E4FF)}
-.btn{display:inline-block;padding:12px 24px;background:#6C8CFF;color:#fff;text-decoration:none;border-radius:10px}
-.container{max-width:1100px;margin:auto;padding:40px 20px}
-input,textarea{width:100%;padding:10px;margin:8px 0}
