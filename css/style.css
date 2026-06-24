@@ -204,3 +204,22 @@ color:#2948D3;
 .hero-stats span{
 color:#6B7280;
 }
+input,
+textarea{
+width:100%;
+padding:14px;
+border:1px solid #d1d5db;
+border-radius:10px;
+margin-top:8px;
+font-size:15px;
+}
+
+label{
+font-weight:600;
+color:#1F2937;
+}
+
+button{
+border:none;
+cursor:pointer;
+}
