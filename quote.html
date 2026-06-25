@@ -1,66 +1,221 @@
 <!DOCTYPE html>
-
 <html lang="ko">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>견적 요청 | SHOREA</title>
+
+<title>공장 찾기 & 비교견적 | SHOREA</title>
+
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
 <header class="header">
-<div class="logo">
-<img src="assets/logo.svg" alt="SHOREA" height="60">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<img src="assets/logo.svg" alt="SHOREA">
+
+<div class="logo-text">
+
+<strong>SHOREA</strong>
+
+<span>China Sourcing Partner</span>
+
 </div>
 
-<nav>
-<a href="index.html">홈</a>
+</a>
+
+<nav class="main-nav">
+
+<a href="quote.html">공장 찾기 & 비교견적</a>
+
+<a href="negotiation.html">중국 협상 지원</a>
+
+<a href="quality.html">품질 관리</a>
+
+<a href="product.html">제품 관리</a>
+
 <a href="contact.html">문의하기</a>
+
 </nav>
+
+<button class="menu-btn">
+
+☰
+
+</button>
+
+</div>
+
 </header>
+
+<section class="hero">
+
+<div class="container">
+
+<p class="hero-label">
+
+FACTORY MATCHING
+
+</p>
+
+<h1>
+
+공장 찾기 & 비교견적
+
+</h1>
+
+<p class="hero-description">
+
+제품 정보만 입력하면
+SHOREA가 중국 공장을 찾고
+비교견적을 진행합니다.
+
+</p>
+
+</div>
+
+</section>
 
 <section class="section">
 
-<h1 class="section-title">
-공장 찾기 & 견적 비교
-</h1>
+<div class="container">
+
+<div class="section-header">
+
+<p>
+
+REQUEST FORM
+
+</p>
+
+<h2>
+
+제품 정보를 입력해주세요.
+
+</h2>
+
+</div>
+
+<form class="quote-form">
+
+<div class="cards">
 
 <div class="card">
 
-<form>
+<label>
 
-<label>제품명</label> <input type="text" placeholder="예: 농구공">
+제품명
 
-<br><br>
+</label>
 
-<label>예상 수량</label> <input type="number" placeholder="예: 1000">
+<input
+type="text"
+placeholder="예) 농구공">
 
-<br><br>
+</div>
 
-<label>희망 단가 (USD)</label> <input type="text" placeholder="예: 2.5">
+<div class="card">
 
-<br><br>
+<label>
 
-<label>MOQ (최소 주문 수량)</label> <input type="text" placeholder="예: 500">
+수량
 
-<br><br>
+</label>
 
-<label>요구사항</label>
+<input
+type="number"
+placeholder="예) 1000">
 
-<textarea rows="6"
-placeholder="원하는 사양, 재질, 색상 등을 입력하세요."></textarea>
+</div>
 
-<br><br>
+<div class="card">
 
-<label>제품 이미지</label> <input type="file" multiple>
+<label>
 
-<br><br>
+희망 단가(USD)
 
-<button class="btn" type="submit">
-견적 요청하기
+</label>
+
+<input
+type="text"
+placeholder="예) 3.50">
+
+</div>
+
+<div class="card">
+
+<label>
+
+희망 납기
+
+</label>
+
+<input
+type="date">
+
+</div>
+<div class="card">
+
+<label>
+
+첨부파일
+
+</label>
+
+<input
+type="file">
+
+</div>
+
+<div class="card">
+
+<label>
+
+제품 링크
+
+</label>
+
+<input
+type="url"
+placeholder="1688 / Alibaba / Taobao URL">
+
+</div>
+
+<div class="card" style="grid-column:1/-1;">
+
+<label>
+
+문의 내용
+
+</label>
+
+<textarea
+rows="8"
+placeholder="원하는 제품의 상세 사양, 색상, 재질, 인증, 패키지 등을 입력해주세요."></textarea>
+
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:40px;">
+
+<button
+class="btn btn-primary"
+type="submit">
+
+비교견적 요청하기
+
 </button>
+
+</div>
 
 </form>
 
@@ -68,5 +223,358 @@ placeholder="원하는 사양, 재질, 색상 등을 입력하세요."></textare
 
 </section>
 
+<section class="section section-dark">
+
+<div class="container">
+
+<div class="section-header">
+
+<p>
+
+PROCESS
+
+</p>
+
+<h2>
+
+비교견적 진행 절차
+
+</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">
+
+①
+
+</div>
+
+<h3>
+
+문의 접수
+
+</h3>
+
+<p>
+
+제품 정보를
+접수합니다.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+
+②
+
+</div>
+
+<h3>
+
+공장 조사
+
+</h3>
+
+<p>
+
+적합한 중국 공장을
+검색하고 검토합니다.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+
+③
+
+</div>
+
+<h3>
+
+비교견적
+
+</h3>
+
+<p>
+
+여러 공장의
+견적을 비교하여
+제안드립니다.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+
+④
+
+</div>
+
+<h3>
+
+상담 진행
+
+</h3>
+
+<p>
+
+견적 확인 후
+협상을 진행합니다.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<div class="container">
+
+<div class="section-header">
+
+<p>
+
+FAQ
+
+</p>
+
+<h2>
+
+자주 묻는 질문
+
+</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+견적은 얼마나 걸리나요?
+
+</h3>
+
+<p>
+
+일반적으로
+1~3영업일 이내
+1차 비교견적을
+제공합니다.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+MOQ 협상도 가능한가요?
+
+</h3>
+
+<p>
+
+가능합니다.
+
+중국 업체와 직접
+MOQ 및 단가를
+협상합니다.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+샘플 제작도 가능한가요?
+
+</h3>
+
+<p>
+
+샘플 제작부터
+본생산까지
+전 과정을
+지원합니다.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+품질검사도 하나요?
+
+</h3>
+
+<p>
+
+생산 전,
+생산 중,
+출고 전
+품질관리를 지원합니다.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+
+지금 바로
+비교견적을 시작하세요.
+
+</h2>
+
+<p>
+
+중국 수입을
+더 쉽고,
+더 안전하게.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="contact.html"
+class="btn btn-primary">
+
+무료 상담
+
+</a>
+
+<a
+href="https://pf.kakao.com/_xlAfxfX"
+class="btn btn-outline">
+
+카카오톡 상담
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="container footer-grid">
+
+<div>
+
+<h3>
+
+SHOREA
+
+</h3>
+
+<p>
+
+China Sourcing Partner
+
+</p>
+
+<p>
+
+중국 소싱의 시작부터
+끝까지 함께합니다.
+
+</p>
+
+</div>
+
+<div>
+
+<h4>
+
+SERVICE
+
+</h4>
+
+<ul>
+
+<li><a href="quote.html">공장 찾기</a></li>
+
+<li><a href="negotiation.html">협상 지원</a></li>
+
+<li><a href="quality.html">품질 관리</a></li>
+
+<li><a href="product.html">제품 관리</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>
+
+CONTACT
+
+</h4>
+
+<p>
+
+contact@shorea.co.kr
+
+</p>
+
+<p>
+
+KakaoTalk : SHOREA
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 SHOREA
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+<script src="js/app.js"></script>
+
 </body>
+
 </html>
