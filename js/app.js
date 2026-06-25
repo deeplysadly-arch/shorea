@@ -1,56 +1,60 @@
-/* ==========================================
-   SHOREA V5
-========================================== */
+/* =====================================================
+   SHOREA JS FINAL
+===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const menuBtn = document.querySelector(".menu-btn");
-  const nav = document.querySelector(".main-nav");
+    const menuBtn = document.querySelector(".menu-btn");
+    const nav = document.querySelector(".nav");
 
-  // 모바일 메뉴 토글
-  if (menuBtn && nav) {
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("active");
-      menuBtn.classList.toggle("active");
-    });
+    /* ================= MOBILE MENU ================= */
 
-    // 메뉴 클릭 시 자동 닫기
-    nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("active");
-        menuBtn.classList.remove("active");
-      });
-    });
-  }
+    if(menuBtn){
 
-  // 스크롤 시 Header 그림자
-  const header = document.querySelector(".header");
+        menuBtn.addEventListener("click", () => {
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
+            nav.classList.toggle("active");
+
+        });
+
     }
-  });
 
-  // 등장 애니메이션
-  const observer = new IntersectionObserver((entries) => {
+    /* ================= SCROLL HEADER ================= */
 
-    entries.forEach(entry => {
+    const header = document.querySelector(".header");
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
+    window.addEventListener("scroll", () => {
+
+        if(window.scrollY > 20){
+
+            header.classList.add("scrolled");
+
+        }else{
+
+            header.classList.remove("scrolled");
+
+        }
 
     });
 
-  }, {
-    threshold: 0.15
-  });
+    /* ================= SCROLL ANIMATION ================= */
 
-  document.querySelectorAll(
-    ".service-card,.step,.ceo-section,.section-title"
-  ).forEach(el => observer.observe(el));
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(
+        ".service-card, .process-item, .ceo, .section-title"
+    ).forEach(el => observer.observe(el));
 
 });
