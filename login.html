@@ -1,1 +1,64 @@
-<h1>login</h1>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOREA | 로그인</title>
+<meta name="description" content="SHOREA 로그인">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-no-fab>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-text">
+<h2>S·H·O·R·E·A</h2>
+<p>Sourcing Hub for Optimized Resource Exchange &amp; Automation</p>
+</div>
+</a>
+<nav class="nav">
+<a href="quote.html">공장 찾기 &amp; 비교견적</a>
+<a href="negotiation.html">중국어 협상 지원</a>
+<a href="quality.html">품질 관리센터</a>
+<a href="product.html">제품 관리</a>
+<a href="contact.html">문의하기</a>
+</nav>
+<button class="menu-btn">☰</button>
+</div>
+</header>
+
+<main class="auth-wrap">
+<div class="auth-card">
+<h1>로그인</h1>
+<p class="auth-sub">SHOREA 계정으로 로그인하세요.</p>
+
+<form onsubmit="alert('데모 화면입니다.');return false;">
+<div class="field">
+<label for="l-email">이메일</label>
+<input id="l-email" type="email" inputmode="email" autocomplete="username" required>
+</div>
+<div class="field">
+<label for="l-pw">비밀번호</label>
+<input id="l-pw" type="password" autocomplete="current-password" required>
+</div>
+<div class="auth-row">
+<label><input type="checkbox"> 로그인 상태 유지</label>
+<a href="#">비밀번호 찾기</a>
+</div>
+<button type="submit" class="btn-primary">로그인</button>
+</form>
+
+<div class="auth-alt">계정이 없으신가요? <a href="signup.html">회원가입</a></div>
+</div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
