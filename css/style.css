@@ -1572,3 +1572,169 @@ gap:28px;
   .strength-card h3{font-size:15px;}
   .section-title h2,.section-header h2{font-size:23px;}
 }
+/* ===================================================
+   FACTORY V2
+=================================================== */
+
+.factory-v2{
+    padding:110px 0 40px;
+    background:#fff;
+}
+
+.factory-tabs{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.tab-btn{
+    border:none;
+    background:#edf4ff;
+    color:#0056b3;
+    padding:14px 28px;
+    border-radius:14px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.tab-btn:hover{
+    background:#dbeafe;
+}
+
+.tab-btn.active{
+    background:#0056b3;
+    color:#fff;
+}
+
+.factory-panel{
+    display:none;
+}
+
+.factory-panel.active{
+    display:block;
+}
+
+.factory-form{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid #edf2f7;
+    border-radius:22px;
+    padding:28px;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.factory-form input,
+.factory-form select,
+.factory-form textarea{
+
+    width:100%;
+    margin-bottom:16px;
+    padding:16px 18px;
+    border:1px solid #d8e2ee;
+    border-radius:12px;
+    font-size:16px;
+    font-family:inherit;
+
+}
+
+.factory-form textarea{
+    min-height:170px;
+    resize:vertical;
+}
+
+.factory-form .btn-primary{
+    width:100%;
+}
+
+.upload-box{
+    border:2px dashed #b9d2ff;
+    border-radius:18px;
+    padding:45px 25px;
+    text-align:center;
+}
+
+.upload-icon{
+    font-size:56px;
+    margin-bottom:18px;
+}
+
+.upload-box h3{
+    font-size:24px;
+    margin-bottom:12px;
+    color:#0f172a;
+}
+
+.upload-box p{
+    color:#64748b;
+    margin-bottom:24px;
+}
+
+.upload-box input[type=file]{
+    margin-bottom:22px;
+}
+
+.factory-benefit{
+    padding:40px 0 60px;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.benefit-card{
+    background:#fff;
+    border:1px solid #edf2f7;
+    border-radius:20px;
+    padding:24px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+    transition:.25s;
+}
+
+.benefit-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(0,0,0,.10);
+}
+
+.benefit-card h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.benefit-card p{
+    color:#64748b;
+    line-height:1.7;
+}
+
+@media (max-width:768px){
+
+    .factory-v2{
+        padding:95px 0 30px;
+    }
+
+    .factory-tabs{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .tab-btn{
+        width:100%;
+    }
+
+    .factory-form{
+        padding:20px;
+    }
+
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+}
