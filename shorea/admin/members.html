@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>회원관리 | SHOREA</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h1>SHOREA</h1>
+
+<p>ADMIN PANEL</p>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span onclick="location.href='index.html'">Dashboard</span>
+
+</li>
+
+<li class="active">
+
+<i class="fa-solid fa-users"></i>
+
+<span>회원관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-envelope"></i>
+
+<span onclick="location.href='inquiries.html'">문의관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-industry"></i>
+
+<span onclick="location.href='factories.html'">공장관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-file-signature"></i>
+
+<span onclick="location.href='quotes.html'">견적관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-box"></i>
+
+<span onclick="location.href='products.html'">제품관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-comments"></i>
+
+<span onclick="location.href='negotiation.html'">협상센터</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<span onclick="location.href='quality.html'">품질관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-gear"></i>
+
+<span onclick="location.href='settings.html'">환경설정</span>
+
+</li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<main class="main">
+
+<header class="topbar">
+
+<div class="left">
+
+<h2>회원관리</h2>
+
+</div>
+
+<div class="right">
+
+<div class="search">
+
+<input type="text" placeholder="회원 검색">
+
+<i class="fa-solid fa-search"></i>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="panel">
+
+<div class="panel-title">
+
+<h3>회원 목록</h3>
+
+<button>회원추가</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>회사명</th>
+
+<th>담당자</th>
+
+<th>등급</th>
+
+<th>플랜</th>
+
+<th>가입일</th>
+
+<th>상태</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>1001</td>
+
+<td>ABC Trading</td>
+
+<td>홍길동</td>
+
+<td>Gold</td>
+
+<td>Premium</td>
+
+<td>2026-06-28</td>
+
+<td><span class="done">정상</span></td>
+
+</tr>
+
+<tr>
+
+<td>1002</td>
+
+<td>Korea Buy</td>
+
+<td>김철수</td>
+
+<td>Silver</td>
+
+<td>Basic</td>
+
+<td>2026-06-27</td>
+
+<td><span class="waiting">대기</span></td>
+
+</tr>
+
+<tr>
+
+<td>1003</td>
+
+<td>Global Parts</td>
+
+<td>이민지</td>
+
+<td>VIP</td>
+
+<td>Enterprise</td>
+
+<td>2026-06-26</td>
+
+<td><span class="done">정상</span></td>
+
+</tr>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>회원관리 | SHOREA</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h1>SHOREA</h1>
+
+<p>ADMIN PANEL</p>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span onclick="location.href='index.html'">Dashboard</span>
+
+</li>
+
+<li class="active">
+
+<i class="fa-solid fa-users"></i>
+
+<span>회원관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-envelope"></i>
+
+<span onclick="location.href='inquiries.html'">문의관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-industry"></i>
+
+<span onclick="location.href='factories.html'">공장관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-file-signature"></i>
+
+<span onclick="location.href='quotes.html'">견적관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-box"></i>
+
+<span onclick="location.href='products.html'">제품관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-comments"></i>
+
+<span onclick="location.href='negotiation.html'">협상센터</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<span onclick="location.href='quality.html'">품질관리</span>
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-gear"></i>
+
+<span onclick="location.href='settings.html'">환경설정</span>
+
+</li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<main class="main">
+
+<header class="topbar">
+
+<div class="left">
+
+<h2>회원관리</h2>
+
+</div>
+
+<div class="right">
+
+<div class="search">
+
+<input type="text" placeholder="회원 검색">
+
+<i class="fa-solid fa-search"></i>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="panel">
+
+<div class="panel-title">
+
+<h3>회원 목록</h3>
+
+<button>회원추가</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>회사명</th>
+
+<th>담당자</th>
+
+<th>등급</th>
+
+<th>플랜</th>
+
+<th>가입일</th>
+
+<th>상태</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>1001</td>
+
+<td>ABC Trading</td>
+
+<td>홍길동</td>
+
+<td>Gold</td>
+
+<td>Premium</td>
+
+<td>2026-06-28</td>
+
+<td><span class="done">정상</span></td>
+
+</tr>
+
+<tr>
+
+<td>1002</td>
+
+<td>Korea Buy</td>
+
+<td>김철수</td>
+
+<td>Silver</td>
+
+<td>Basic</td>
+
+<td>2026-06-27</td>
+
+<td><span class="waiting">대기</span></td>
+
+</tr>
+
+<tr>
+
+<td>1003</td>
+
+<td>Global Parts</td>
+
+<td>이민지</td>
+
+<td>VIP</td>
+
+<td>Enterprise</td>
+
+<td>2026-06-26</td>
+
+<td><span class="done">정상</span></td>
+
+</tr>
