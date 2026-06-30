@@ -1,1 +1,75 @@
-<h1>signup</h1>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOREA | 회원가입</title>
+<meta name="description" content="SHOREA 회원가입">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-no-fab>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-text">
+<h2>S·H·O·R·E·A</h2>
+<p>Sourcing Hub for Optimized Resource Exchange &amp; Automation</p>
+</div>
+</a>
+<nav class="nav">
+<a href="quote.html">공장 찾기 &amp; 비교견적</a>
+<a href="negotiation.html">중국어 협상 지원</a>
+<a href="quality.html">품질 관리센터</a>
+<a href="product.html">제품 관리</a>
+<a href="contact.html">문의하기</a>
+</nav>
+<button class="menu-btn">☰</button>
+</div>
+</header>
+
+<main class="auth-wrap">
+<div class="auth-card">
+<h1>회원가입</h1>
+<p class="auth-sub">SHOREA와 함께 중국 소싱을 시작하세요.</p>
+
+<form onsubmit="alert('데모 화면입니다.');return false;">
+<div class="field">
+<label for="s-name">이름</label>
+<input id="s-name" type="text" autocomplete="name" required>
+</div>
+<div class="field">
+<label for="s-company">회사명 (선택)</label>
+<input id="s-company" type="text" autocomplete="organization">
+</div>
+<div class="field">
+<label for="s-email">이메일</label>
+<input id="s-email" type="email" inputmode="email" autocomplete="username" required>
+</div>
+<div class="field">
+<label for="s-pw">비밀번호</label>
+<input id="s-pw" type="password" autocomplete="new-password" required>
+</div>
+<div class="field">
+<label for="s-pw2">비밀번호 확인</label>
+<input id="s-pw2" type="password" autocomplete="new-password" required>
+</div>
+<div class="auth-row">
+<label><input type="checkbox" required> <span>이용약관 및 개인정보처리방침에 동의합니다.</span></label>
+</div>
+<button type="submit" class="btn-primary">회원가입</button>
+</form>
+
+<div class="auth-alt">이미 계정이 있으신가요? <a href="login.html">로그인</a></div>
+</div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
