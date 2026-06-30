@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SHOREA Admin Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+body{
+
+margin:0;
+
+background:#F6F8FC;
+
+font-family:'Pretendard',sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+.login-card{
+
+width:420px;
+
+background:#fff;
+
+padding:45px;
+
+border-radius:24px;
+
+box-shadow:0 20px 50px rgba(15,76,129,.10);
+
+}
+
+.logo{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+.logo h1{
+
+margin:0;
+
+color:#0F4C81;
+
+font-size:42px;
+
+}
+
+.logo p{
+
+color:#64748B;
+
+margin-top:8px;
+
+}
+
+.input-group{
+
+margin-bottom:20px;
+
+}
+
+.input-group label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+}
+
+.input-group input{
+
+width:100%;
+
+height:50px;
+
+border:1px solid #E5EAF2;
+
+border-radius:14px;
+
+padding:0 15px;
+
+font-size:15px;
+
+box-sizing:border-box;
+
+}
+
+.input-group input:focus{
+
+outline:none;
+
+border-color:#2F80ED;
+
+}
+
+.login-btn{
+
+width:100%;
+
+height:54px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#0F4C81,#2F80ED);
+
+color:#fff;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+margin-top:10px;
+
+}
+
+.login-btn:hover{
+
+opacity:.95;
+
+}
+
+.error{
+
+margin-top:15px;
+
+color:#EF4444;
+
+font-size:14px;
+
+text-align:center;
+
+display:none;
+
+}
+
+.footer{
+
+margin-top:30px;
+
+text-align:center;
+
+font-size:13px;
+
+color:#94A3B8;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-card">
+
+<div class="logo">
+
+<h1>SHOREA</h1>
+
+<p>Administrator Login</p>
+
+</div>
+
+<div class="input-group">
+
+<label>아이디</label>
+
+<input id="id" type="text" placeholder="Admin ID">
+
+</div>
+
+<div class="input-group">
+
+<label>비밀번호</label>
+
+<input id="pw" type="password" placeholder="Password">
+
+</div>
+
+<button class="login-btn" onclick="login()">
+
+로그인
+
+</button>
+
+<div class="error" id="error">
+
+아이디 또는 비밀번호가 올바르지 않습니다.
+
+</div>
+
+<div class="footer">
+
+© 2026 SHOREA Admin
+
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+const id=document.getElementById("id").value;
+
+const pw=document.getElementById("pw").value;
+
+if(id==="admin" && pw==="1234"){
+
+location.href="index.html";
+
+}else{
+
+document.getElementById("error").style.display="block";
+
+}
+
+}
+
+document.addEventListener("keydown",(e)=>{
+
+if(e.key==="Enter") login();
+
+});
+
+</script>
+
+</body>
+
+</html>
