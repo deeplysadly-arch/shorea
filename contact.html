@@ -2,110 +2,385 @@
 <html lang="ko">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHOREA | 문의하기</title>
-<meta name="description" content="SHOREA 문의하기 — 중국 공장 발굴, 비교견적, 중국어 협상, 품질관리까지 상담하세요.">
+
+<title>문의하기 | SHOREA</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
-<body data-no-fab>
+<body>
 
 <header class="header">
+
 <div class="container header-inner">
+
 <a href="index.html" class="logo">
+
 <div class="logo-text">
-<h2>S·H·O·R·E·A</h2>
-<p>Sourcing Hub for Optimized Resource Exchange &amp; Automation</p>
+
+<h2>SHOREA</h2>
+
+<p>Smart Hub of Retail E-commerce Automation</p>
+
 </div>
+
 </a>
+
 <nav class="nav">
-<a href="quote.html">공장 찾기 &amp; 비교견적</a>
-<a href="negotiation.html">중국어 협상 지원</a>
-<a href="quality.html">품질 관리센터</a>
-<a href="product.html">제품 관리</a>
-<a href="contact.html">문의하기</a>
+
+<a href="factory.html">공장 찾기</a>
+
+<a href="negotiation.html">중국어 협상</a>
+
+<a href="quality.html">품질관리</a>
+
+<a href="product.html">제품관리</a>
+
+<a href="contact.html" class="active">문의하기</a>
+
 </nav>
-<button class="menu-btn">☰</button>
+
+<div class="header-btn">
+
+<a href="login.html" class="btn-primary">
+
+로그인
+
+</a>
+
 </div>
+
+<button class="menu-btn">
+
+☰
+
+</button>
+
+</div>
+
 </header>
 
-<section class="section page-top">
+<section class="page-hero">
+
 <div class="container">
 
-<div class="section-header">
-<p>CONTACT</p>
-<h2>문의하기</h2>
-</div>
+<span>CONTACT</span>
 
-<form class="quote-form" onsubmit="alert('문의가 접수되었습니다. (데모)');return false;">
-<div class="field">
-<label for="c-name">이름</label>
-<input id="c-name" type="text" autocomplete="name" required>
-</div>
-<div class="field">
-<label for="c-company">회사명</label>
-<input id="c-company" type="text" autocomplete="organization">
-</div>
-<div class="field">
-<label for="c-phone">연락처</label>
-<input id="c-phone" type="tel" inputmode="tel" placeholder="010-0000-0000" autocomplete="tel">
-</div>
-<div class="field">
-<label for="c-email">이메일</label>
-<input id="c-email" type="email" inputmode="email" autocomplete="email" required>
-</div>
-<div class="field">
-<label for="c-msg">문의 내용</label>
-<textarea id="c-msg" rows="5" placeholder="제품, 수량, 일정 등 문의 내용을 입력해 주세요." required></textarea>
-</div>
-<div class="form-submit">
-<button type="submit" class="btn-primary">문의 보내기</button>
-</div>
-</form>
+<h1>
 
-<div class="card" style="max-width:780px;margin:22px auto 0;text-align:center;">
-<h3>카카오톡으로 빠른 상담</h3>
-<p>가장 빠른 상담 방법입니다. 평일 09:00 ~ 18:00 응대합니다.</p>
-<p style="margin-top:16px;">
-<a class="btn" href="https://pf.kakao.com/_xlAfxfX" target="_blank" rel="noopener">카카오톡 상담하기</a>
+문의하기
+
+</h1>
+
+<p>
+
+궁금한 사항을 남겨주시면 빠르게 답변드리겠습니다.
+
 </p>
+
+</div>
+
+</section>
+
+<section class="contact-wrap">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div class="contact-form">
+
+<h2>
+
+문의 작성
+
+</h2>
+
+<div class="form-group">
+
+<label>회사명</label>
+
+<input
+id="company"
+type="text"
+placeholder="회사명">
+
+</div>
+
+<div class="form-group">
+
+<label>담당자</label>
+
+<input
+id="manager"
+type="text"
+placeholder="담당자명">
+
+</div>
+
+<div class="form-group">
+
+<label>이메일</label>
+
+<input
+id="email"
+type="email"
+placeholder="example@email.com">
+
+</div>
+
+<div class="form-group">
+
+<label>문의 내용</label>
+
+<textarea
+id="message"
+placeholder="문의 내용을 입력하세요."></textarea>
+
+</div>
+
+<button
+id="contactSubmit"
+class="btn-primary">
+
+문의 보내기
+
+</button>
+
+</div>
+
+<div class="contact-info">
+
+<h2>
+
+CONTACT
+
+</h2>
+
+<p>
+
+📧 contact@shorea.co.kr
+
+</p>
+
+<p>
+
+🕘 Mon - Fri 09:00 ~ 18:00
+
+</p>
+
+<p>
+
+📍 Gyeonggi-do, Korea
+
+</p>
+
 </div>
 
 </div>
+
+</div>
+
+</section>
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+자주 묻는 질문
+
+</h2>
+
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<h3>
+
+답변은 얼마나 걸리나요?
+
+</h3>
+
+<p>
+
+영업일 기준 24시간 이내 답변드립니다.
+
+</p>
+
+</div>
+
+<div class="faq-card">
+
+<h3>
+
+공장만 찾아줄 수도 있나요?
+
+</h3>
+
+<p>
+
+네. 공장 발굴 및 비교견적만 의뢰하셔도 됩니다.
+
+</p>
+
+</div>
+
+<div class="faq-card">
+
+<h3>
+
+중국어 협상도 대신해주나요?
+
+</h3>
+
+<p>
+
+네. SHOREA가 직접 협상을 지원합니다.
+
+</p>
+
+</div>
+
+<div class="faq-card">
+
+<h3>
+
+품질관리만 의뢰 가능한가요?
+
+</h3>
+
+<p>
+
+네. QC 서비스만 별도로 진행 가능합니다.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+
+중국 소싱이 필요하신가요?
+
+</h2>
+
+<p>
+
+SHOREA가 처음부터 끝까지 함께합니다.
+
+</p>
+
+<div class="cta-buttons">
+
+<a href="factory.html" class="btn-outline">
+
+공장 찾기
+
+</a>
+
+<a href="negotiation.html" class="btn-primary">
+
+AI 협상
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <footer class="footer">
+
 <div class="container">
+
 <div class="footer-grid">
+
 <div>
-<h3>S·H·O·R·E·A</h3>
-<p class="footer-text">Sourcing Hub for Optimized Resource Exchange &amp; Automation</p>
+
+<h3>SHOREA</h3>
+
+<p>
+
+Smart Hub of Retail E-commerce Automation
+
+</p>
+
 </div>
+
 <div>
+
 <h4>SERVICE</h4>
+
 <ul>
-<li><a href="quote.html">공장 찾기 &amp; 비교견적</a></li>
-<li><a href="negotiation.html">중국어 협상 지원</a></li>
-<li><a href="quality.html">품질 관리센터</a></li>
-<li><a href="product.html">제품 관리</a></li>
+
+<li><a href="factory.html">공장 찾기</a></li>
+
+<li><a href="negotiation.html">중국어 협상</a></li>
+
+<li><a href="quality.html">품질관리</a></li>
+
+<li><a href="product.html">제품관리</a></li>
+
 </ul>
+
 </div>
+
 <div>
+
 <h4>CONTACT</h4>
+
 <p>contact@shorea.co.kr</p>
-<p>평일 09:00 ~ 18:00</p>
+
+<p>Mon - Fri 09:00 ~ 18:00</p>
+
 <p>Gyeonggi-do, Korea</p>
+
 </div>
+
 </div>
-<div class="copyright">© 2026 SHOREA. All Rights Reserved.</div>
+
+<div class="copyright">
+
+© 2026 SHOREA. All Rights Reserved.
+
 </div>
+
+</div>
+
 </footer>
 
-<script src="js/script.js"></script>
-</body>
+<script src="js/app.js"></script>
+<script src="js/contact.js"></script>
 
+</body>
 </html>
