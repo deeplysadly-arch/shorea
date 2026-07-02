@@ -1,86 +1,60 @@
-import { auth } from "./firebase.js";
+import { auth, db } from "./firebase.js";
 
 import {
-    createUserWithEmailAndPassword,
-    updateProfile
+    createUserWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+import {
+    doc,
+    setDoc,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-    const signupBtn = document.getElementById("signupBtn");
+const signupBtn = document.getElementById("signupBtn");
 
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
+signupBtn.addEventListener("click", async () => {
 
-    if (!signupBtn) return;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
-    signupBtn.addEventListener("click", async () => {
+    if (!name || !email || !password) {
+        alert("모든 항목을 입력해주세요.");
+        return;
+    }
 
-        if (
-            name.value.trim() === "" ||
-            email.value.trim() === "" ||
-            password.value === ""
-        ) {
+   try {
 
-            alert("모든 항목을 입력하세요.");
+    const userCredential =
+        await createUserWithEmailAndPassword(auth, email, password);
 
-            return;
+    console.log("회원가입 성공", userCredential.user.uid);
 
-        }
+    await setDoc(doc(db, "users", userCredential.user.uid), {
 
-        try {
-
-            const user = await createUserWithEmailAndPassword(
-
-                auth,
-
-                email.value.trim(),
-
-                password.value
-
-            );
-
-            await updateProfile(user.user, {
-
-                displayName: name.value.trim()
-
-            });
-
-            alert("회원가입이 완료되었습니다.");
-
-            window.location.href = "login.html";
-
-        } catch (error) {
-
-            switch (error.code) {
-
-                case "auth/email-already-in-use":
-
-                    alert("이미 가입된 이메일입니다.");
-
-                    break;
-
-                case "auth/weak-password":
-
-                    alert("비밀번호는 6자 이상이어야 합니다.");
-
-                    break;
-
-                case "auth/invalid-email":
-
-                    alert("올바른 이메일 형식이 아닙니다.");
-
-                    break;
-
-                default:
-
-                    alert(error.message);
-
-            }
-
-        }
+        name: name,
+        email: email,
+        createdAt: serverTimestamp(),
+        role: "user"
 
     });
 
+    console.log("Firestore 저장 성공");
+
+    alert("회원가입이 완료되었습니다.");
+
+    location.href = "login.html";
+
+} catch (error) {
+
+    console.error("회원가입 오류:", error);
+
+    alert(error.code + "\n" + error.message);
+
+}
+
+    console.error(error);
+    alert(error.code + "\n" + error.message);
+
+}
 });

@@ -1,80 +1,79 @@
 import { auth } from "./firebase.js";
 
 import {
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    setPersistence,
+    browserLocalPersistence,
+    browserSessionPersistence
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+const loginBtn = document.querySelector(".login-btn");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const rememberMe = document.getElementById("rememberMe");
 
-    const loginBtn = document.querySelector(".login-btn");
-    const emailInput = document.querySelector("input[type='email']");
-    const passwordInput = document.querySelector("input[type='password']");
+async function login() {
 
-    if (!loginBtn || !emailInput || !passwordInput) return;
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
 
-    async function login() {
+    if (!email || !password) {
+        alert("이메일과 비밀번호를 입력하세요.");
+        return;
+    }
 
-        const email = emailInput.value.trim();
-        const password = passwordInput.value;
+    loginBtn.disabled = true;
+    loginBtn.textContent = "로그인 중...";
 
-        if (!email || !password) {
-            alert("이메일과 비밀번호를 입력하세요.");
-            return;
-        }
+    try {
 
-        loginBtn.disabled = true;
-        loginBtn.textContent = "로그인 중...";
+        await setPersistence(
+            auth,
+            rememberMe.checked
+                ? browserLocalPersistence
+                : browserSessionPersistence
+        );
 
-        try {
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
 
-            await signInWithEmailAndPassword(auth, email, password);
+        alert("로그인되었습니다.");
 
-            alert("로그인되었습니다.");
+        location.href = "index.html";
 
-            window.location.href = "index.html";
+    } catch (e) {
 
-        } catch (error) {
+        switch (e.code) {
 
-            switch (error.code) {
+            case "auth/invalid-credential":
+                alert("이메일 또는 비밀번호가 올바르지 않습니다.");
+                break;
 
-                case "auth/invalid-credential":
-                case "auth/user-not-found":
-                case "auth/wrong-password":
-                    alert("이메일 또는 비밀번호가 올바르지 않습니다.");
-                    break;
+            case "auth/too-many-requests":
+                alert("로그인 시도가 너무 많습니다.");
+                break;
 
-                case "auth/invalid-email":
-                    alert("이메일 형식이 올바르지 않습니다.");
-                    break;
-
-                case "auth/too-many-requests":
-                    alert("로그인 시도가 너무 많습니다. 잠시 후 다시 시도하세요.");
-                    break;
-
-                default:
-                    alert(error.message);
-
-            }
-
-        } finally {
-
-            loginBtn.disabled = false;
-            loginBtn.textContent = "로그인";
+            default:
+                alert(e.message);
 
         }
+
+    } finally {
+
+        loginBtn.disabled = false;
+        loginBtn.textContent = "로그인";
 
     }
 
-    loginBtn.addEventListener("click", login);
+}
 
-    passwordInput.addEventListener("keydown", (e) => {
+loginBtn.addEventListener("click", login);
 
-        if (e.key === "Enter") {
+passwordInput.addEventListener("keydown", e => {
 
-            login();
-
-        }
-
-    });
+    if (e.key === "Enter") login();
 
 });
